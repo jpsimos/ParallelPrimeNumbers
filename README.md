@@ -9,7 +9,9 @@ so expect lower cpu cores to generate more primes during a given length of time.
 Output is stored separately at the current directory in files named PRIMES_THREAD_CORENUM.TXT
 
 You must define _GNU_SOURCE, in this case it is done during compilation:
+
 gcc -D_GNU_SOURCE -O3 --std=gnu99 -o ParallelPrimeNumbers Main.c -lpthread
 
 The example invocation below runs the tool for one hour and saves the primes 
+
 timeout -s STOP 1h ./ParallelPrimeNumbers
